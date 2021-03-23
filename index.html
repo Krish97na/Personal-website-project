@@ -12,10 +12,10 @@
             <a href="#" class="logo">Portfolio</a>
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#work">Works</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About me</a></li>
+                <li><a href="#work" onclick="toggleMenu();">Works</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
             </ul>
         </header>
         <section class="banner" id="home">
@@ -50,6 +50,7 @@
                     </div>
                 </div>                
         </section> 
+
         <section class="work" id="work">
             <div class="heading">
                 <h2>Works</h2>
@@ -68,8 +69,8 @@
                     <p>INCEpTION is an open source annotation providing platform. We(as a team) evaluated the software, refactored it and implemented a new feature as well.</p>
                 </div>
                 <div class="workBox">
-                    <h3>Robotic software development using DevOps </h3>
-                    <p> Master Thesis topic which I'm currently working on .</p>
+                    <h3>Master Thesis: Robotic software development using DevOps </h3>
+                    <p> The aim of this thesis work is to present the adaption of DevOps practices in robotic software development. The outcomes will constitute practices from DevOps which will potentially bring further value to the existing the robotic software development process.</p>
                 </div>
             </div>
         </section>
@@ -121,7 +122,9 @@
 
         function toggleMenu(){
             var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
             menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
         }
         </script>  
     </body> 
